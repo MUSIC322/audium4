@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Music Streaming</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+
+  <!-- Header Section -->
+  <header>
+    <div class="logo">MusicStream</div>
+    <nav>
+      <ul>
+        <li><a href="/">Главная</a></li>
+        <li><a href="#">Каталог</a></li>
+        <li><a href="#">Мой профиль</a></li>
+        <li><a href="#">Поддержка</a></li>
+        <li><a href="#">Войти</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <section class="search-section">
+      <input type="text" placeholder="Искать музыку...">
+    </section>
+
+    <section class="recommendations">
+      <h2>Рекомендации</h2>
+      <div class="albums">
+        {% for album in albums %}
+        <div class="album">
+          <img src="{{ url_for('static', filename=album.image) }}" alt="Album">
+          <p>{{ album.name }}</p>
+          <!-- Встраиваем аудиоплеер -->
+          <audio controls>
+            <source src="{{ url_for('static', filename=album.file) }}" type="audio/mp3">
+            Ваш браузер не поддерживает аудиоплеер.
+          </audio>
+          <br>
+          <a href="{{ url_for('download', filename=album.file) }}" class="download-btn">⬇️ Скачать</a>
+        </div>
+        {% endfor %}
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2024 MusicStream. Все права защищены.</p>
+  </footer>
+
+</body>
+</html>

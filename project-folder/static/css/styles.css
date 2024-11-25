@@ -1,0 +1,105 @@
+/* Основной стиль для сайта */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1a1a1a;
+    color: white;
+  }
+  
+  header {
+    background-color: #333;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  header .logo {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  header nav ul {
+    list-style: none;
+    display: flex;
+  }
+  
+  header nav ul li {
+    margin-left: 20px;
+  }
+  
+  header nav ul li a {
+    text-decoration: none;
+    color: white;
+  }
+  
+  main {
+    padding: 20px;
+  }
+  
+  .search-section {
+    text-align: center;
+  }
+  
+  .search-section input {
+    width: 80%;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 20px;
+  }
+  
+  .recommendations {
+    margin-top: 30px;
+  }
+  
+  .recommendations h2 {
+    text-align: center;
+  }
+  
+  .albums {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  
+  .album {
+    width: 200px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .album img {
+    width: 100%;
+    border-radius: 8px;
+  }
+  
+  audio {
+    width: 100%;
+    margin-top: 10px;
+  }
+  
+  .download-btn {
+    display: block;
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+  }
+  
+  .download-btn:hover {
+    background-color: #45a049;
+  }
+  
+  footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+  }
+  
